@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>Ein Berg im Mondschein</title>
+  <style rel='text/css'>
+ 
+      @font-face {
+        font-family: 'Champfleury';
+        src: url('Champfleury-Thin.woff2') format('woff2'),
+            url('Champfleury-Thin.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+        body {
+          margin: none;
+          width: 100vw;
+          height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: 'Champfleury';
+        }
+
+        img {
+          height: 70vh;
+          width: auto;
+          display: block;
+          margin-top: 5vh;
+          margin-left: auto;
+          margin-right: auto;
+            border: 20px solid white;
+    }
+      
+      p {
+          text-align: center;
+          margin-top: 5vh;
+      }
+
+  </style>
+</head>
+
+<body style='margin: 0;'>
+
+  <img id='thisimage' src='Scan.png' />
+    
+    <p>
+        Du bist ein Berg im Mondschein, <br>
+        Der mich anstrahlt und zu mir spricht.<br>
+        Und ich antworte,<br>
+        Indem ich dich bewundere,<br>
+        Bis meine Augen zufallen.<br>
+    </p>
+
+</body>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+
+$( 'body' ).mousemove(function( event ) {
+  var corX = event.clientX / 2;
+  var corY = event.clientY / 4;
+  $('body').css("background-color", "rgb(" + corX + ", " + corY + ", 100)");
+  });
+
+</script>
+
+</html>
